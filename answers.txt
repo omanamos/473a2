@@ -1,0 +1,20 @@
+Ryan Oman
+CSE 473 - Assignment 2
+
+1.) A.) forall(A,B) ParentOf(A,B) -> AncestorOf(A,B)
+	B.) forall(A,B) Siblings(A,B) -> Siblings(B,A)
+	C.) forall(A,B) AncestorOf(B,A) -> (forall(C) AncestorOf(C,B) -> AncestorOf(C,A))
+	D.) forall(A,B,C,D) ParentOf(A,B) & ParentOf(C,D) & Siblings(A,C) -> Cousins(B,D)
+	E.) forall(A,B) BloodRelated(A,B) -> BloodRelated(B,A)
+	F.) forall(A,B) AncestorOf(A,B) -> BloodRelated(A,B)
+	G.) forall(A,B) BloodRelated(A,B) -> (forall(C) AncestorOf(C,B) -> BloodRelated(A,C))
+	
+3.) This knowledge base is relatively simple to prepositionalize because the base
+	statements from question one are relatively simple statements. That is, there aren't
+	a lot of nested statements inside of them and they are generally only one thing
+	implies another.
+	
+	This knowledge base is simple to run inference on because most of the statement are 
+	one thing implies one other thing, and the implications chain together. Also the left
+	sides of the implication are relatively simple, meaning no combinatorial explosion
+	results from running the implication algorithm.
